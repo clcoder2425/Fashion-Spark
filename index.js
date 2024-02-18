@@ -10,6 +10,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => console.log(err));
 
+app.use(express.json());
 app.use("/api/users", userRoute);
 
 app.listen(process.env.PORT || 3000, () => {
