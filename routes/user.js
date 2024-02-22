@@ -30,7 +30,7 @@ router.delete("/:id", verifyTokenAuth, async (req, res) => {
     }
 });
 
-// Get user by id
+// Get all users
 router.get("/", verifyTokenAdmin, async (req, res) => {
     const query = req.query.new;
     try {
@@ -40,6 +40,13 @@ router.get("/", verifyTokenAdmin, async (req, res) => {
         res.status(200).json(users);
     } catch (err) {
         res.status(500).json(err);
+    }
+});
+
+router.get("/", verifyTokenAdmin, async (req, res) => {
+    const query = req.query.new;
+    try {
+        const
     }
 });
 
