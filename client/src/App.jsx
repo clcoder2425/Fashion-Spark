@@ -1,18 +1,12 @@
-import { useState } from 'react'
-import Header from './componets/Header'
-import AppContainer from './componets/AppContainer'
-import Footer from './componets/Footer'
-import './App.css'
+import Product from "./pages/Product";
+import Home from "./pages/Home";
+import ProductList from "./pages/ProductList";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Cart from "./pages/Cart";
 
-function App() {
+const App = () => {
+  return <Home/>;
+};
 
-  return (
-    <>
-      <Header />
-      <AppContainer />
-      <Footer />
-    </>
-  )
-}
-
-export default App
+export default App;

@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import NavBar from './NavBar'; // Fix the file name to match the actual file name
+import NavBar from './NavBar'; 
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Search from './pages/Search';
-import ShoppingCart from './pages/ShoppingCart';
+import ShoppingCart from './pages/ProductList';
 import SignIn from './pages/SignIn';
 
 
 
 export default function AppContainer() {
-  const [currentPage, setCurrentPage] = useState('Aboutme');
+  const [currentPage, setCurrentPage] = useState('Home');
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
