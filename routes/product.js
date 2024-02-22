@@ -34,6 +34,22 @@ router.put("/:id", verifyTokenAdmin, async (req, res) => {
     }
 });
 
+// Delete product by id
+router.delete("/:id", verifyTokenAdmin, async (req, res) => {
+
+    try {
+        await Product.findByIdAndDelete(req.params.id);
+        res.status(200).json("Product has been deleted successfully");
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// Get product by id
+router.get("/find/:id", async (req, res) => {
+    
+});
+
 
 
 
