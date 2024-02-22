@@ -46,6 +46,17 @@ router.delete('/:id', verifyTokenAuth, async (req, res) => {
     }
 });
 
+// Get cart by id
+router.get('/:id', verifyTokenAuth, async (req, res) => {
+    
+    try {
+        const cart = await Cart.findById(req.params.id);
+        res.status(200).json(cart);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 
 
