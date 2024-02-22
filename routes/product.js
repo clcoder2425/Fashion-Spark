@@ -19,6 +19,21 @@ router.post("/", verifyTokenAdmin, async (req, res) => {
     }
 });
 
+// Update product
+router.put("/:id", verifyTokenAdmin, async (req, res) => {
+
+    try {
+        const updatedProduct = await Product.findByIdAndUpdate(
+            req.params.id,
+            { $set: req.body },
+            { new: true }
+        );
+        res.status(200).json(updatedProduct);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 
 
