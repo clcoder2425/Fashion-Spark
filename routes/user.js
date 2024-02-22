@@ -43,10 +43,14 @@ router.get("/", verifyTokenAdmin, async (req, res) => {
     }
 });
 
+// Get user by id
 router.get("/", verifyTokenAdmin, async (req, res) => {
-    const query = req.query.new;
     try {
-        const
+        const user = await User.findById(req.params.id);
+        const { password, ...others } = user._doc;
+        res.status(200).json(others);
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 
