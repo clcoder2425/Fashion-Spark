@@ -22,6 +22,7 @@ router.put("/:id", verifyTokenAuth, async (req, res) => {
 
 // Delete user by id
 router.delete("/:id", verifyTokenAuth, async (req, res) => {
+    
     try{
         await User.findByIdAndDelete(req.params.id);
         res.status(200).json("User has been deleted successfully");
@@ -33,6 +34,7 @@ router.delete("/:id", verifyTokenAuth, async (req, res) => {
 // Get all users
 router.get("/", verifyTokenAdmin, async (req, res) => {
     const query = req.query.new;
+    
     try {
         const users = query 
         ? await User.find().sort({ _id: -1}).limit(5)
@@ -45,6 +47,7 @@ router.get("/", verifyTokenAdmin, async (req, res) => {
 
 // Get user by id
 router.get("/", verifyTokenAdmin, async (req, res) => {
+    
     try {
         const user = await User.findById(req.params.id);
         const { password, ...others } = user._doc;
@@ -52,6 +55,33 @@ router.get("/", verifyTokenAdmin, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+// Get user stats
+router.get("/stats", verifyTokenAdmin, async (req, res) => {
+    const date = new Date();
+    const lastYear = newDate(date.setFullYear(date.getFullYear() - 1));
+
+    try{
+        const data = await User.aggregate([
+            { $match: { createdAt: { $get: lastYear}}},
+            {
+                $project: {
+                    month: { $month: "$createdAt" },
+                },
+            },
+            {
+                $group: {
+                    _id: "$month",
+                    total: { $sum: 1 },
+                },
+            },
+        ]);
+        res.status(200).json(data);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+
 });
 
 
