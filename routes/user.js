@@ -60,7 +60,7 @@ router.get("/", verifyTokenAdmin, async (req, res) => {
 // Get user stats
 router.get("/stats", verifyTokenAdmin, async (req, res) => {
     const date = new Date();
-    const lastYear = newDate(date.setFullYear(date.getFullYear() - 1));
+    const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
 
     try{
         const data = await User.aggregate([
