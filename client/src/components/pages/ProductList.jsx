@@ -1,8 +1,16 @@
-import React from 'react'
-export default function ShoppingCart() {
+
+
+
+
+const ProductList = () => {
   return (
     <div>
-      <h1>Here goes the Shopping Cart</h1>
+     <h1>Products list</h1>
+      <Products />
+      <Newsletter />
+      <Footer />
     </div>
-  )
-}
+  );
+};
+
+export default ProductList;

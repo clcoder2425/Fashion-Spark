@@ -1,8 +1,21 @@
-import React from 'react'
-export default function Search() {
+
+
+// import { Add, Remove } from "@material-ui/icons";
+// import styled from "styled-components";
+import Announcement from "../components/Announcement";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Newsletter from "../components/Newsletter";
+// import { mobile } from "../responsive";
+
+
+
+const Product = () => {
   return (
-    <div>
-      <h1>here goes the search box</h1>
-    </div>
-  )
-}
+    
+      <h1>Product</h1>
+     
+  );
+};
+
+export default Product;

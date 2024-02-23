@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import NavBar from './NavBar'; 
+import NavBar from './NavBar';
 import Home from './pages/Home';
+import Login from './pages/Login';
 import Register from './pages/Register';
-import Search from './pages/Search';
-import ShoppingCart from './pages/ProductList';
-import SignIn from './pages/SignIn';
+import Cart from './pages/Cart';
 
 
 
@@ -16,14 +15,14 @@ export default function AppContainer() {
     if (currentPage === 'Home') {
       return <Home />;
     }
+    if (currentPage === 'Login') {
+      return <Login />;
+    }
     if (currentPage === 'Register') {
       return <Register />;
     }
-    if (currentPage === 'SignIn') {
-      return <SignIn />;
-    }
-    if (currentPage=== 'ShoppingCart') {
-      return <ShoppingCart />;
+    if (currentPage=== 'Cart') {
+      return <Cart/>;
     }
     return <Home/>
     

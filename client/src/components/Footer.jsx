@@ -33,10 +33,11 @@ function Footer() {
                 </a>
               </MDBCol>
             </MDBRow>
-            <h6>Carmen Jimenez</h6>
+            <h6>Fashion Spark</h6>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
     </footer>
   );
 };
+export default Footer;
