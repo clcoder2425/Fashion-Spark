@@ -1,5 +1,6 @@
 // This file is the NavTabs component. It is used to create the navigation tabs at the top of the page.
-
+import React from 'react';
+import './Styles/NavBar.css';
 
 function NavBar({ currentPage, handlePageChange }) {
   return (
@@ -12,7 +13,7 @@ function NavBar({ currentPage, handlePageChange }) {
          // Check to see if the currentPage is `About me`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
         >
-          Home
+          Fashion Spark
         </a>
       </li>
       <li className="nav-item">
@@ -42,7 +43,7 @@ function NavBar({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `Resume`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
         >
-         Cart
+         {/* <i class="fas fa-cart-shopping"></i> */}
         </a>
       </li>
     </ul>
