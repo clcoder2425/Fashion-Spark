@@ -1,5 +1,7 @@
 // This file is the NavTabs component. It is used to create the navigation tabs at the top of the page.
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Styles/NavBar.css';
 
 function NavBar({ currentPage, handlePageChange }) {
@@ -37,13 +39,12 @@ function NavBar({ currentPage, handlePageChange }) {
         </a>
       </li>
       <li className="nav-item">
-        <a id ='nav-button'
+        <a 
           href="#Cart"
           onClick={() => handlePageChange('Cart')}
-          // Check to see if the currentPage is `Resume`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
         >
-      Cart
+          <FontAwesomeIcon icon={faShoppingCart} /> Cart
         </a>
       </li>
     </ul>
