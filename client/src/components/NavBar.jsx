@@ -43,7 +43,7 @@ function NavBar({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `Resume`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
         >
-         {/* <i class="fas fa-cart-shopping"></i> */}
+      Cart
         </a>
       </li>
     </ul>
