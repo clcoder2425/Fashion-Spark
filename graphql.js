@@ -1,4 +1,6 @@
-const { ApolloServer, gql } = require('appolo-server-express');
+const { ApolloServer, gql } = require('apollo-server-express');
+const User = require('./models/User');
+
 const typeDefs = gql`
     type User {
         id: ID!
