@@ -29,11 +29,47 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+}
+footer {
+  
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid#cec075;
+    padding: 10px;
+    line-height: 9px;
+    margin-top: 600px;
+  }
+  
+  
+ 
+
+footer span {
+  
+  color:#170a1c;
+  text-align: center;
+ 
+  font-size: 10px;
+ 
+}
+li a {
+  
+  color:#188fa7;
+  text-align: center;
+ 
+  font-size: 10px;
+ 
 }
 
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color:#170a1c;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
 }
 
 button {
@@ -67,3 +103,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

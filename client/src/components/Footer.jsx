@@ -4,6 +4,7 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 
+
 function Footer() {
   return (
 //Footer with social media links
@@ -14,10 +15,11 @@ function Footer() {
           <MDBCol>
             <MDBRow className="justify-content-center">
               <MDBCol size="auto" className="me-3">
+                
 
                 <a href="https://twitter.com/Carmen_SanDieg1" target="_blank" rel="noopener noreferrer" className="text-white me-3">
                   <MDBIcon fab icon="twitter" size="2x" />
-                  <span className="d-block">Twitter</span>
+                  <span className="d-block"> Twiiter</span>
                 </a>
               </MDBCol>
               <MDBCol size="auto" className="me-3">

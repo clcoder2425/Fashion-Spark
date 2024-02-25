@@ -15,7 +15,7 @@ function NavBar({ currentPage, handlePageChange }) {
          // Check to see if the currentPage is `About me`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
         >
-          Fashion Spark
+          Home
         </a>
       </li>
       <li className="nav-item">
@@ -31,7 +31,7 @@ function NavBar({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a 
           href="#Register"
-          onClick={() => handlePageChange('REgister')}
+          onClick={() => handlePageChange('Register')}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Register' ? 'nav-link active' : 'nav-link'}
         >
