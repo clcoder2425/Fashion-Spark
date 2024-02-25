@@ -10,14 +10,14 @@ import Slider from "../Slider";
 const Home = () => {
   return (
     <div>
-      {/* <Announcement />
-      <Navbar />
-      <Slider />
-      <Categories />
-      <Products/>
-      <Newsletter/>
-      <Footer/> */}
-      <h1>Home</h1>
+      {/* <Announcement /> */}
+      {/* <Navbar /> */}
+      {/* <Slider /> */}
+      <Categories/>
+      {/* <Products/> */}
+      {/* <Newsletter/> */}
+      {/* <Footer/> */}
+      {/* <h1>Home</h1> */}
     </div>
   );
 };
