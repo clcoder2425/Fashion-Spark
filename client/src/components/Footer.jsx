@@ -2,17 +2,17 @@
 import React from "react";
 //Importing MDBReactUI
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-
+import "./Styles/footer.css?inline";
 
 function Footer() {
   return (
 //Footer with social media links
     
-    <footer className="bg-dark text-center text-white fixed-bottom">
-      <MDBContainer >
+    // <footer className=" wrapper bg-dark text-center text-white fixed-bottom">
+      <MDBContainer className= "wrapper" >
         <MDBRow>
           <MDBCol>
-            <MDBRow className="justify-content-center">
+            <MDBRow className="footer-el justify-content-center">
               <MDBCol size="auto" className="me-3">
 
                 <a href="https://twitter.com/Carmen_SanDieg1" target="_blank" rel="noopener noreferrer" className="text-white me-3">
@@ -37,7 +37,7 @@ function Footer() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-    </footer>
+    // </footer>
   );
 };
 export default Footer;

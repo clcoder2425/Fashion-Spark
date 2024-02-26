@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 // import { Collapse, initCollapse } from "mdb-ui-kit"; // Import from "mdb-ui-kit" instead of "mdb-ui-kit"
 // initMDB({ Collapse }); // Initialize the Collapse component
+import "./Styles/categories.css";
 
 const Categories = () => {
   // useEffect(() => {
@@ -9,27 +10,25 @@ const Categories = () => {
   // }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+   
+    <nav className="navwrapper navbar-expand-lg navbar-light bg-body-tertiary">
       <div className="container-fluid">
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Home
+                Men
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Features
+                Women
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Pricing
+                Children
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
             </li>
           </ul>
         </div>
