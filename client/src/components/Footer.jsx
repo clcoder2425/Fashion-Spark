@@ -90,9 +90,7 @@ const Footer = () => {
       <Left>
         <Logo>Fashion Spark.</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+        Fashion Spark is an innovative ecommerce platform that offers a curated selection of fashion products, ranging from trendy clothing to stylish accessories. With a focus on providing customers with a seamless shopping experience, Fashion Spark combines cutting-edge technology with a passion for fashion to deliver a unique online retail experience..
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">

@@ -1,9 +1,11 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import { mobile } from "../responsive";
+import Announcement from "../Announcement.jsx";
+import Footer from "../Footer";
+import Navbar from "../NavBar";
+import { mobile } from "../../responsive.js";
+
+
 
 const Container = styled.div``;
 
