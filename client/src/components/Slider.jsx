@@ -1,38 +1,4 @@
 
-
-// import React from 'react';
-// import Carousel from 'react-material-ui-carousel'
-
-// import Item from './Item';
-
-// function Slider(props)
-// {
-//     var items = [
-//         {
-//             name: "Random Name #1",
-//             description: "Probably the most random thing you have ever seen!"
-//         },
-//         {
-//             name: "Random Name #2",
-//             description: "Hello World!"
-//         }
-//     ]
-
-//     return (
-//         <Carousel
-//         next={ (next, active) => console.log(`we left ${active}, and are now at ${next}`) }
-//         prev={ (prev, active) => console.log(`we left ${active}, and are now at ${prev}`) }
-//     >
-//             {
-//                 items.map( (item, i) => <Item key={i} item={item} /> )
-//             }
-//         </Carousel>
-//     )
-// }
-
-
-// export default Slider;
-
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { useState } from "react"
 import styled from "styled-components"

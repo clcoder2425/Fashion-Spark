@@ -1,64 +1,80 @@
-import React from 'react';
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
-export default function Register() {
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Wrapper = styled.div`
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+  ${mobile({ width: "75%" })}
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  font-weight: 300;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Input = styled.input`
+  flex: 1;
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+`;
+
+const Agreement = styled.span`
+  font-size: 12px;
+  margin: 20px 0px;
+`;
+
+const Button = styled.button`
+  width: 40%;
+  border: none;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+`;
+
+const Register = () => {
   return (
-    <>
-      <div className="vh-100" style={{ backgroundColor: '#eee' }}>
-        <div className="container h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-lg-12 col-xl-11">
-              <div className="card text-black" style={{ borderRadius: '25px' }}>
-                <div className="card-body p-md-5">
-                  <div className="row justify-content-center">
-                    <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                      <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-                      <form className="mx-1 mx-md-4">
-                        <div className="mb-4">
-                          <label className="form-label" htmlFor="form3Example1c">Your Name</label>
-                          <div className="d-flex flex-row align-items-center">
-                            <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                            <input type="text" id="form3Example1c" className="form-control" />
-                          </div>
-                        </div>
-                        <div className="mb-4">
-                          <label className="form-label" htmlFor="form3Example3c">Your Email</label>
-                          <div className="d-flex flex-row align-items-center">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                            <input type="email" id="form3Example3c" className="form-control" />
-                          </div>
-                        </div>
-                        <div className="mb-4">
-                          <label className="form-label" htmlFor="form3Example4c">Password</label>
-                          <div className="d-flex flex-row align-items-center">
-                            <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
-                            <input type="password" id="form3Example4c" className="form-control" />
-                          </div>
-                        </div>
-                        <div className="mb-4">
-                          <label className="form-label" htmlFor="form3Example4cd">Repeat your password</label>
-                          <div className="d-flex flex-row align-items-center">
-                            <i className="fas fa-key fa-lg me-3 fa-fw"></i>
-                            <input type="password" id="form3Example4cd" className="form-control" />
-                          </div>
-                        </div>
-                        <div className="form-check mb-5">
-                          <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                          <label className="form-check-label" htmlFor="form2Example3c">
-                            I agree all statements in <a href="#!">Terms of service</a>
-                          </label>
-                        </div>
-                        <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" className="btn btn-primary btn-lg">Register</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <Container>
+      <Wrapper>
+        <Title>CREATE AN ACCOUNT</Title>
+        <Form>
+          <Input placeholder="name" />
+          <Input placeholder="last name" />
+          <Input placeholder="username" />
+          <Input placeholder="email" />
+          <Input placeholder="password" />
+          <Input placeholder="confirm password" />
+          <Agreement>
+            By creating an account, I consent to the processing of my personal
+            data in accordance with the <b>PRIVACY POLICY</b>
+          </Agreement>
+          <Button>CREATE</Button>
+        </Form>
+      </Wrapper>
+    </Container>
   );
-}
+};
+
+export default Register;
