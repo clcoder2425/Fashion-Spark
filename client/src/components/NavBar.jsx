@@ -1,60 +1,96 @@
-// This file is the NavTabs component. It is used to create the navigation tabs at the top of the page.
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import './Styles/NavBar.css';
+import React from 'react'
+// import Search from '@mui/icons-material/Search';
+import styled from 'styled-components';
+import Badge from '@mui/material/Badge';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { SearchOutlined} from '@mui/icons-material';
+import { mobile } from "../responsive";
 
-function NavBar({ currentPage, handlePageChange }) {
+const Container = styled.div`
+height: 10px;
+${mobile({ height: "50px" })}
+
+}`
+const Wrapper = styled.div`
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+${mobile({ padding: "10px 0px" })}`
+
+const Left = styled.div`
+flex: 1;
+display: flex;
+aign-items: center;
+`
+
+const MenuItem = styled.div`
+font-size: 14px;
+cursor: pointer;
+margin-left: 25px;
+${mobile({ fontSize: "12px", marginLeft: "10px" })}`
+
+const Center = styled.div`
+flex: 1;
+text-align: center;`
+
+const Right = styled.div`
+flex: 1;
+display: flex;
+aicn-items: center;
+jcstify-content: flex-end;
+${mobile({ flex: 2, justifyContent: "center" })}
+`
+
+const Language = styled.span`
+font-size: 14px;
+cursor: pointer;
+${mobile({ display: "none" })}
+`
+const SearchContainer = styled.div`
+border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 10px;`
+
+const Input = styled.input`
+border: none;
+size: 10%;
+${mobile({ width: "50px" })}
+`
+const Logo = styled.h1`
+font-weight: bold;
+${mobile({ fontSize: "24px" })}
+`
+
+
+const Navbar = () => {
   return (
-
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a 
-          href="#Home" 
-          onClick={() => handlePageChange('Home')}
-         // Check to see if the currentPage is `About me`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a 
-          href="#Login"
-          onClick={() => handlePageChange('Login')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
-        >
-          Login
-        </a>
-      </li>
-      <li className="nav-item">
-        <a 
-          href="#Register"
-          onClick={() => handlePageChange('Register')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Register' ? 'nav-link active' : 'nav-link'}
-        >
-          Register
-        </a>
-      </li>
-      <li className="nav-item">
-        <a 
-          href="#Cart"
-          onClick={() => handlePageChange('Cart')}
-          className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
-        >
-          <FontAwesomeIcon icon={faShoppingCart} /> Cart
-        </a>
-      </li>
-    </ul>
-  );
+    <Container>
+        <Wrapper>
+            <Left><Language>
+                En
+            </Language>
+            <SearchContainer>
+              <Input placeholder="Search"/>
+                <SearchOutlined style={{color:"gray", fontSize:"16" }}/>
+            </SearchContainer>
+            </Left>
+            <Center>
+                <Logo>Fashion Spark.</Logo>
+                </Center>
+            <Right>
+                <MenuItem>REGISTER</MenuItem>
+                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem>
+                    <Badge badgeContent={4} color="primary">
+                        <ShoppingCartOutlinedIcon/>
+                    </Badge>
+                </MenuItem>
+            </Right>
+        </Wrapper>
+        </Container>
+  )
 }
 
-export default NavBar;
-
-  
- 
-
-
-
+export default Navbar
