@@ -13,6 +13,10 @@ ${mobile({ height: "50px" })}
 }`
 const Wrapper = styled.div`
 padding: 10px 20px;
+ ;
+letter-spacing: 2px;
+
+color:#170a1c;
 display: flex;
 justify-content: space-between;
 ${mobile({ padding: "10px 0px" })}`
@@ -20,6 +24,7 @@ ${mobile({ padding: "10px 0px" })}`
 const Left = styled.div`
 flex: 1;
 display: flex;
+
 aign-items: center;
 `
 
@@ -36,6 +41,7 @@ text-align: center;`
 const Right = styled.div`
 flex: 1;
 display: flex;
+padding-left:750px;
 aicn-items: center;
 jcstify-content: flex-end;
 ${mobile({ flex: 2, justifyContent: "center" })}
@@ -67,18 +73,21 @@ ${mobile({ fontSize: "24px" })}
 const Navbar = () => {
   return (
     <Container>
+      <div class="header">
+      <Center>
+                <Logo style={{color:"#170a1c", fontSize:"100" }}>Fashion Spark </Logo>
+                </Center>
+                </div>
         <Wrapper>
-            <Left><Language>
-                En
+            <Left><Language style={{color:"#170a1c", fontSize:"2" }}>
+                EN
             </Language>
             <SearchContainer>
               <Input placeholder="Search"/>
-                <SearchOutlined style={{color:"gray", fontSize:"16" }}/>
+                <SearchOutlined style={{color:"#170a1c", fontSize:"16" }}/>
             </SearchContainer>
             </Left>
-            <Center>
-                <Logo>Fashion Spark</Logo>
-                </Center>
+            
             <Right>
                 <MenuItem>REGISTER</MenuItem>
                 <MenuItem>SIGN IN</MenuItem>

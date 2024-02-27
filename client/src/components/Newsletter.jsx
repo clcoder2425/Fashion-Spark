@@ -3,15 +3,17 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-  height: 60vh;
-  background-color: #fcf5f5;
+  height: 24vh;
+  background-color: #edd2e0 ;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom:50px;
+  padding-bottom:50px;
 `;
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 50px;
   margin-bottom: 20px;
 `;
 
@@ -25,7 +27,7 @@ const Desc = styled.div`
 
 const InputContainer = styled.div`
   width: 50%;
-  height: 40px;
+  height: 50px;
   background-color: white;
   display: flex;
   justify-content: space-between;

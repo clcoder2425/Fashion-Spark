@@ -16,13 +16,21 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #170a1c;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #170a1c;
 }
 
+/*Shop Now*/
+button.sc-blmEgr.daVWan {
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #170a1c;
+
+}
 body {
   margin: 0;
   display: flex;
@@ -44,10 +52,16 @@ h1 {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+
   color:#170a1c;
   text-align: center;
-  font-family: cursive;
-  font-size: 30px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+h1.sc-jsEeTM.dFLdgD{
+  font-size: 70px;
+
 }
 .juIUhc {
   flex: 1;
@@ -59,14 +73,35 @@ margin-bottom: 10px;
   font-weight: bold;
 }
 
-
+/* Header Fashion Spark*/
 h1.sc-jsEeTM.dFLdgD {
-  color:#170a1c;
-  padding-top: 10px;
-  margin-bottom: 30px;
+  color:#34183e;
   margin-top: 10px;
-  font-family: cursive;
+  
+ 
+  width: 100%;
+  height: 100px;
+  
 
+	
+	
+ 
+ 
+
+}
+
+div.header{
+  height: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 10px;
+  
+  font-family: sans-serif;
+
+
+
+  background-image: linear-gradient( 135deg,#F8F9FA 60%,white 170%);
+ 
 }
 /*Button*/
 button {
@@ -89,45 +124,118 @@ button {
 
 div.sc-fsYfdNhDmUTo{
   
-  border-bottom-width: 10px;
-  padding-top: 1px;
-  padding-right: 1px;
-  padding-bottom: 1px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
 
 }
 
 /*Search Bar*/
-div.sc-eKzvBH.cLwrMY{
+div.sc-fsYfdN.hDmUTo{
   
-  border-bottom-width: 10px;
+  border-bottom-width: 5px;
   padding-top: 1px;
   padding-right: 1px;
   padding-bottom: 1px;
   margin-left: 30px;
   margin-bottom: 30px;
+  height: 30px;
+ 
 
 
 }
 
+
+/*Input Bar*/
+input.sc-qZrbh.fhhFqp{
+ 
+  
+  
+  height: 30px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+
+
+}
+
+/*Register Sign Cart*/
+div.sc-gLLuof.dczjWj{
+  margin-top: 10px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  
+  
+
+
+}
+
+/*Register Sign Cart Text*/
+div.sc-eDLKkx.fOGdba{
+  margin-top: 10px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+
+}
 
 /*Span english*/
-div.sc-eKzvBH.cLwrMY{
-  
-  border-bottom-width: 10px;
-  padding-top: 1px;
-  padding-right: 1px;
-  padding-bottom: 1px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+span.sc-iBdnpw.kkUKNL{
+  padding-top: 6px;
+text-transform: capitalize;
+ 
 
 
 }
+/*Span Div*/
+div.sc-hLQSwg.hxDbtU{
+  margin-top: 10px;
+  
+  text-transform: capitalize;
+   
+  
+  
+  }
+
+
+  /*Slider*/
+div.sc-bsBUuZ.hYOtAu{
+  margin-top: 100px;
+  margin-bottom: 50px;
+height: 500px;
+width: 100%;
+
+   
+  
+  
+  }
+
+    /*Product Cartds*/
+div.sc-fLseNd.kxJCRT{
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  
+
+width: 100%;
+
+   
+  
+  
+  }
+  NavBar{
+
+    width: 100%;
+   
+  }
+
+  div.sc-eEelSk.immlaW{
+
+    background-color:#170a1c;
+
+  }
+
+   
 
 button:hover {
-  border-color: #646cff;
+  border-color: #F8F9FA;
 }
 button:focus,
 button:focus-visible {

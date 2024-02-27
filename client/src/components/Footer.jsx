@@ -20,6 +20,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  background-color: #cec075  ;
 `;
 
 const Logo = styled.h1``;
@@ -30,6 +31,7 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
   display: flex;
+
 `;
 
 const SocialIcon = styled.div`
@@ -42,11 +44,13 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+  background-color: #170a1c  ;
 `;
 
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  background-color: #cec075  ;
   ${mobile({ display: "none" })}
 `;
 
@@ -60,6 +64,8 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  
+  
 `;
 
 const ListItem = styled.li`
@@ -70,6 +76,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  background-color: #cec075  ;
   ${mobile({ backgroundColor: "#fff8f8" })}
 
 `;
@@ -88,11 +95,11 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>Fashion Spark.</Logo>
+        <Logo>Fashion Spark</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+        The ultimate destination for fashionistas on the hunt for the hottest trends.
+         Our mission is to ignite your wardrobe with a dazzling array of styles that are sure to make you the envy of every runway. 
+        So, buckle up and get ready to set the fashion world ablaze with Fashion Spark!
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -114,12 +121,11 @@ const Footer = () => {
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
+         
+          <ListItem>About Us</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
+          <ListItem>Newsletter</ListItem>
           <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
         </List>
@@ -127,13 +133,13 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <Room style={{marginRight:"10px"}}/> 1234 Somestreet , Anywhere USA 21212
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+          <Phone style={{marginRight:"10px"}}/> +1 999 99 99
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+          <MailOutline style={{marginRight:"10px"}} /> contact@contact.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

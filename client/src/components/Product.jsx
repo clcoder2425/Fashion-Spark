@@ -1,24 +1,28 @@
 import { Send } from "@mui/icons-material";
+
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-  height: 60vh;
-  background-color: #fcf5f5;
+  height: 30vh;
+  width:40vh;
+  background-color: #F8F9FA ;
   display: flex;
+  margin: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 20px;
   margin-bottom: 20px;
 `;
 
 const Desc = styled.div`
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 300;
   margin-bottom: 20px;
+  
   ${mobile({ textAlign: "center" })}
 
 `;
@@ -36,12 +40,13 @@ const InputContainer = styled.div`
 const Input = styled.input`
   border: none;
   flex: 8;
-  padding-left: 20px;
+  padding-left: 50px;
 `;
 
 const Button = styled.button`
   flex: 1;
   border: none;
+  
   background-color: teal;
   color: white;
 `;
@@ -49,14 +54,15 @@ const Button = styled.button`
 const Newsletter = () => {
   return (
     <Container>
-      <Title>Newsletter</Title>
-      <Desc>Get timely updates from your favorite products.</Desc>
-      <InputContainer>
-        <Input placeholder="Your email" />
+      <Title>Product</Title>
+      <Desc>Product Description</Desc>
+      <div>
+      <Desc>Add to Cart &nbsp;&nbsp;&nbsp; </Desc>
         <Button>
           <Send />
         </Button>
-      </InputContainer>
+        </div>
+     
     </Container>
   );
 };
