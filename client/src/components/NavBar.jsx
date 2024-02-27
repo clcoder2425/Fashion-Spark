@@ -88,13 +88,13 @@ const Navbar = () => {
                 <MenuItem>SIGN IN</MenuItem>
                 </Link>
                 
-                {/* <Link to="/cart"> */}
+                <Link to="/cart">
                   <MenuItem>
                     <Badge badgeContent={4} color="primary">
                         <ShoppingCartOutlinedIcon/>
                     </Badge>
                     </MenuItem>
-                {/* </Link> */}
+                </Link>
                 
             </Right>
         </Wrapper>

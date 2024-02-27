@@ -43,14 +43,14 @@ import App from './App.jsx';
 import Home from './components/pages/Home.jsx';
 import Register from './components/pages/Register.jsx';
 import Login from './components/pages/Login.jsx';
-// import Cart from './components/pages/Cart.jsx';
+import Cart from './components/pages/Cart.jsx';
 
 const router = (
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/register" element={<Register />} />
     <Route path="/login" element={<Login />} />
-    {/* <Route path="/cart" element={<Cart />} /> */}
+    <Route path="/cart" element={<Cart />} />
   </Routes>
 );
 
