@@ -78,7 +78,7 @@ const Navbar = () => {
             </SearchContainer>
             </Left>
             <Center>
-                <Logo>Fashion Spark.</Logo>
+                <Logo>Fashion Spark</Logo>
                 </Center>
             <Right>
               <Link to="/register">

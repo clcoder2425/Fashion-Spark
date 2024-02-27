@@ -31,11 +31,44 @@ body {
   min-height: 100vh;
 }
 
+/*Top Header Fashion Spark*/
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color:#170a1c;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+}
+.juIUhc {
+  flex: 1;
+  text-align: center;
+margin-bottom: 10px;
 }
 
+.dFLdgD {
+  font-weight: bold;
+}
+
+
+h1.sc-jsEeTM.dFLdgD {
+  color:#170a1c;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-family: cursive;
+
+}
+/*Button*/
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -47,6 +80,52 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+
+
+
+
+/*Banner Anouncement*/
+
+div.sc-fsYfdNhDmUTo{
+  
+  border-bottom-width: 10px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+
+}
+
+/*Search Bar*/
+div.sc-eKzvBH.cLwrMY{
+  
+  border-bottom-width: 10px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+
+}
+
+
+/*Span english*/
+div.sc-eKzvBH.cLwrMY{
+  
+  border-bottom-width: 10px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+
+}
+
 button:hover {
   border-color: #646cff;
 }
