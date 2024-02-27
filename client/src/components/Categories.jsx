@@ -1,39 +1,23 @@
-import React, { useEffect } from "react";
-// import { Collapse, initCollapse } from "mdb-ui-kit"; // Import from "mdb-ui-kit" instead of "mdb-ui-kit"
-// initMDB({ Collapse }); // Initialize the Collapse component
-import "./Styles/categories.css";
+import styled from "styled-components";
+import { categories } from "../data";
+import { mobile } from "../responsive";
+import CategoryItem from "./CategoryItem";
+
+const Container = styled.div`
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  ${mobile({ padding: "0px", flexDirection:"column" })}
+
+`;
 
 const Categories = () => {
-  // useEffect(() => {
-    // Initialize the Collapse component once the component is mounted
-  //   initCollapse();
-  // }, []);
-
   return (
-   
-    <nav className="navwrapper navbar-expand-lg navbar-light bg-body-tertiary">
-      <div className="container-fluid">
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Men
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Women
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Children
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Container>
+      {categories.map((item) => (
+        <CategoryItem item={item} key={item.id} />
+      ))}
+    </Container>
   );
 };
 

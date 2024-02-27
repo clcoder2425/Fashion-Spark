@@ -1,25 +1,28 @@
-import React from "react";
-import Announcement from "../Announcement";
-import Categories from "../Categories";
-import Footer from "../Footer";
-import Navbar from "../NavBar";
-import Newsletter from "../Newsletter";
-import Products from "../Products";
-import Slider from "../Slider";
+import React from 'react'
+import Announcement from '../Announcement';
+import NavBar from '../NavBar';
+import Slider from '../Slider';
+import Categories from '../Categories';
+import Products from '../Products';
+import Newsletter from '../Newsletter';
+import Footer from '../Footer';
+
 
 const Home = () => {
   return (
     <div>
-      {/* <Announcement /> */}
-      {/* <Navbar /> */}
-      {/* <Slider /> */}
-      <Categories/>
-      {/* <Products/> */}
-      {/* <Newsletter/> */}
-      {/* <Footer/> */}
-      {/* <h1>Home</h1> */}
+      <Announcement/>
+        <NavBar/>
+        <br/>
+        <br/>
+        <br/>
+        <Slider/>
+        <Categories/>
+        <Products/>
+        <Newsletter/>
+        <Footer/>
     </div>
-  );
+  )
 };
 
-export default Home;
+export default Home
