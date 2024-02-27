@@ -1,5 +1,5 @@
 
-
+import './app.css'
 
 
 import Home from './components/pages/Home'
