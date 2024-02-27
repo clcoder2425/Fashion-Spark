@@ -32,7 +32,8 @@
 A ecommerce applcation were useres a can sign-in, browse, and purchase clothing. <br>
 
 Link to repository: https://github.com/clcoder2425/Fashion-Spark <br>
-Demo:![alt text](FashionSparkDemo.gif)
+Demo: <br>
+![alt text](FashionSparkDemo.gif)
 
 
 
