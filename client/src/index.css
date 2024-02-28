@@ -195,17 +195,7 @@ div.sc-hLQSwg.hxDbtU{
   }
 
 
-  /*Slider*/
-div.sc-bsBUuZ.hYOtAu{
-  margin-top: 100px;
-  margin-bottom: 50px;
-height: 500px;
-width: 100%;
 
-   
-  
-  
-  }
 
     /*Product Cartds*/
 div.sc-fLseNd.kxJCRT{
@@ -215,10 +205,12 @@ div.sc-fLseNd.kxJCRT{
   
 
 width: 100%;
+}
 
-   
-  
-  
+  div.sc-kFCroH.hoBcXX{
+
+width: auto;
+
   }
   NavBar{
 
