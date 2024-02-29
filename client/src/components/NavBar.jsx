@@ -7,13 +7,24 @@ import { SearchOutlined} from '@mui/icons-material';
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-height: 10px;
+
+color:#34183e;
+margin-top: 10px;
+
+
+
+width: 100%;
+height: 90px;
+
 ${mobile({ height: "50px" })}
 
 }`
 const Wrapper = styled.div`
 padding: 10px 20px;
- ;
+color:#170a1c;
+text-align: center;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+font-size: 20px;;
 letter-spacing: 2px;
 
 color:#170a1c;
@@ -25,30 +36,42 @@ const Left = styled.div`
 flex: 1;
 display: flex;
 
+
 aign-items: center;
 `
 
 const MenuItem = styled.div`
-font-size: 14px;
+color:#170a1c;
+text-align: center;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+font-size: 12px;
 cursor: pointer;
+
 margin-left: 25px;
 ${mobile({ fontSize: "12px", marginLeft: "10px" })}`
 
 const Center = styled.div`
 flex: 1;
+
 text-align: center;`
 
 const Right = styled.div`
 flex: 1;
 display: flex;
 padding-left:750px;
+font-weight: bold;
 aicn-items: center;
 jcstify-content: flex-end;
 ${mobile({ flex: 2, justifyContent: "center" })}
 `
 
 const Language = styled.span`
-font-size: 14px;
+text-align: center;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+margin-left: 25px;
 cursor: pointer;
 ${mobile({ display: "none" })}
 `
@@ -57,6 +80,16 @@ border: 0.5px solid lightgray;
   display: flex;
   align-items: center;
   margin-left: 25px;
+  border-bottom-width: 5px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  height: 10px;
+
+ 
+
   padding: 10px;`
 
 const Input = styled.input`
@@ -66,7 +99,7 @@ ${mobile({ width: "50px" })}
 `
 const Logo = styled.h1`
 font-weight: bold;
-${mobile({ fontSize: "24px" })}
+${mobile({ fontSize: "70px" })}
 `
 
 
@@ -76,20 +109,23 @@ const Navbar = () => {
     <Container>
       <div class="header">
       <Center>
-                <Logo style={{color:"#170a1c", fontSize:"100" }}>Fashion Spark </Logo>
+                <Logo style={{color:"#170a1c", fontSize:"70px",  }}>Fashion Spark </Logo>
                 </Center>
                 </div>
         <Wrapper>
-            <Left><Language style={{color:"#170a1c", fontSize:"2" }}>
+            <Left><Language style={{color:"#170a1c", fontSize:"12px" }}>
                 EN
             </Language>
             <SearchContainer>
               <Input placeholder="Search"/>
-                <SearchOutlined style={{color:"#170a1c", fontSize:"16" }}/>
+                <SearchOutlined style={{color:"#170a1c", fontSize:"15px" }}/>
             </SearchContainer>
             </Left>
             
             <Right>
+            <Link to="/">
+                <MenuItem >Home</MenuItem>
+                </Link>
               <Link to="/register">
                 <MenuItem >REGISTER</MenuItem>
                 </Link>

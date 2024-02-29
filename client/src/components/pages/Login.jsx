@@ -3,10 +3,11 @@ import {mobile} from "../../responsive";
 
 const Container = styled.div`
   width: 100vw;
+  margin-left:-390px;
   height: 100vh;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
     ),
     url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
       center;
@@ -19,7 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
-  background-color: white;
+  background-color: #F8F9FA ;
   ${mobile({ width: "75%" })}
 `;
 

@@ -1,6 +1,7 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Announcement from "../Announcement.jsx";
+import Newsletter from '../Newsletter';
 import Footer from "../Footer";
 import Navbar from "../NavBar";
 import { mobile } from "../../responsive.js";
@@ -158,8 +159,17 @@ const Button = styled.button`
 const Cart = () => {
   return (
     <Container>
+      
       <Navbar />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Announcement />
+      
+   
+     
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
@@ -246,7 +256,23 @@ const Cart = () => {
           </Summary>
         </Bottom>
       </Wrapper>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <Newsletter/>
       <Footer />
+    
     </Container>
   );
 };
