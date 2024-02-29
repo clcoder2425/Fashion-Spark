@@ -1,60 +1,151 @@
-// This file is the NavTabs component. It is used to create the navigation tabs at the top of the page.
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import './Styles/NavBar.css';
+import {Link} from 'react-router-dom';
+// import Search from '@mui/icons-material/Search';
+import styled from 'styled-components';
+import Badge from '@mui/material/Badge';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { SearchOutlined} from '@mui/icons-material';
+import { mobile } from "../responsive";
 
-function NavBar({ currentPage, handlePageChange }) {
-  return (
+const Container = styled.div`
 
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a 
-          href="#Home" 
-          onClick={() => handlePageChange('Home')}
-         // Check to see if the currentPage is `About me`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a 
-          href="#Login"
-          onClick={() => handlePageChange('Login')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
-        >
-          Login
-        </a>
-      </li>
-      <li className="nav-item">
-        <a 
-          href="#Register"
-          onClick={() => handlePageChange('Register')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Register' ? 'nav-link active' : 'nav-link'}
-        >
-          Register
-        </a>
-      </li>
-      <li className="nav-item">
-        <a 
-          href="#Cart"
-          onClick={() => handlePageChange('Cart')}
-          className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
-        >
-          <FontAwesomeIcon icon={faShoppingCart} /> Cart
-        </a>
-      </li>
-    </ul>
-  );
-}
+color:#34183e;
+margin-top: 10px;
 
-export default NavBar;
 
-  
+
+width: 100%;
+height: 90px;
+
+${mobile({ height: "50px" })}
+
+}`
+const Wrapper = styled.div`
+padding: 10px 20px;
+
+text-align: center;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+
+
+color:#170a1c;
+display: flex;
+justify-content: space-between;
+${mobile({ padding: "10px 0px" })}`
+
+const Left = styled.div`
+flex: 1;
+display: flex;
+
+
+aign-items: center;
+`
+
+const MenuItem = styled.div`
+color:#170a1c;
+text-align: center;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+font-size: 12px;
+cursor: pointer;
+
+
+margin-left: 9px;
+${mobile({ fontSize: "12px", marginLeft: "10px" })}`
+
+const Center = styled.div`
+flex: 1;
+
+text-align: center;`
+
+const Right = styled.div`
+flex: 1;
+display: flex;
+padding-left:720px;
+font-weight: 600;
+aicn-items: center;
+jcstify-content: flex-end;
+${mobile({ flex: 2, justifyContent: "center" })}
+`
+
+const Language = styled.span`
+text-align: center;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+margin-left: 25px;
+cursor: pointer;
+${mobile({ display: "none" })}
+`
+const SearchContainer = styled.div`
+border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  border-bottom-width: 5px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  height: 10px;
+
  
 
+  padding: 10px;`
+
+const Input = styled.input`
+border: none;
+size: 10%;
+${mobile({ width: "50px" })}
+`
+const Logo = styled.h1`
+font-weight: bold;
+${mobile({ fontSize: "70px" })}
+`
 
 
+const Navbar = () => {
+  
+  return (
+    <Container>
+      <div class="header">
+      <Center>
+                <Logo style={{color:"#170a1c", fontSize:"70px",  }}>Fashion Spark </Logo>
+                </Center>
+                </div>
+        <Wrapper>
+            <Left><Language style={{color:"#170a1c", fontSize:"12px" }}>
+                EN
+            </Language>
+            <SearchContainer>
+              <Input placeholder="Search"/>
+                <SearchOutlined style={{color:"#170a1c", fontSize:"15px" }}/>
+            </SearchContainer>
+            </Left>
+            
+            <Right>
+            <Link to="/">
+                <MenuItem >Home</MenuItem>
+                </Link>
+              <Link to="/register">
+                <MenuItem >REGISTER</MenuItem>
+                </Link>
+                <Link to="/login">
+                <MenuItem>SIGN IN</MenuItem>
+                </Link>
+                
+                <Link to="/cart">
+                  <MenuItem>
+                    <Badge badgeContent={4} color="primary">
+                        <ShoppingCartOutlinedIcon/>
+                    </Badge>
+                    </MenuItem>
+                </Link>
+                
+            </Right>
+        </Wrapper>
+        </Container>
+  )
+}
+
+export default Navbar

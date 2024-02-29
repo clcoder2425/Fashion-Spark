@@ -1,61 +1,78 @@
-import React from 'react'
-export default function Login() {
+import styled from "styled-components";
+import {mobile} from "../../responsive";
+
+const Container = styled.div`
+  width: 100vw;
+  margin-left:-390px;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Wrapper = styled.div`
+  width: 25%;
+  padding: 20px;
+  background-color: #F8F9FA ;
+  ${mobile({ width: "75%" })}
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  font-weight: 300;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Input = styled.input`
+  flex: 1;
+  min-width: 40%;
+  margin: 10px 0;
+  padding: 10px;
+`;
+
+const Button = styled.button`
+  width: 40%;
+  border: none;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+`;
+
+const Link = styled.a`
+  margin: 5px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
+const Login = () => {
   return (
-    <div>
-      <form>
-  {/* <!-- Email input --> */}
-  <div class="form-outline mb-4">
-    <input type="email" id="form2Example1" class="form-control" />
-    <label class="form-label" for="form2Example1">Email address</label>
-  </div>
+    <Container>
+      <Wrapper>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input placeholder="username" />
+          <Input placeholder="password" />
+          <Button>LOGIN</Button>
+          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
+          <Link>CREATE A NEW ACCOUNT</Link>
+        </Form>
+      </Wrapper>
+    </Container>
+  );
+};
 
-  {/* <!-- Password input --> */}
-  <div class="form-outline mb-4">
-    <input type="password" id="form2Example2" class="form-control" />
-    <label class="form-label" for="form2Example2">Password</label>
-  </div>
-
-  {/* <!-- 2 column grid layout for inline styling --> */}
-  <div class="row mb-4">
-    <div class="col d-flex justify-content-center">
-      {/* <!-- Checkbox --> */}
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-        <label class="form-check-label" for="form2Example31"> Remember me </label>
-      </div>
-    </div>
-
-    <div class="col">
-      {/* <!-- Simple link --> */}
-      <a href="#!">Forgot password?</a>
-    </div>
-  </div>
-
-  {/* <!-- Submit button --> */}
-  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-
-  {/* <!-- Register buttons --> */}
-  <div class="text-center">
-    <p>Not a member? <a href="#!">Register</a></p>
-    <p>or sign up with:</p>
-    <button type="button" class="btn btn-link btn-floating mx-1">
-      <i class="fab fa-facebook-f"></i>
-    </button>
-
-    <button type="button" class="btn btn-link btn-floating mx-1">
-      <i class="fab fa-google"></i>
-    </button>
-
-    <button type="button" class="btn btn-link btn-floating mx-1">
-      <i class="fab fa-twitter"></i>
-    </button>
-
-    <button type="button" class="btn btn-link btn-floating mx-1">
-      <i class="fab fa-github"></i>
-    </button>
-  </div>
-</form>
-    </div>
-  )
-}
-
+export default Login;
