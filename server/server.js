@@ -30,7 +30,7 @@ const startApolloServer = async () => {
   app.use('/graphql', expressMiddleware(server));
 
   // Comment out this code once you have built out queries and mutations in the client folder
-  //app.use(routes);
+  app.use(routes);
 
   // if we're in production, serve client/dist as static assets
   if (process.env.NODE_ENV === 'production') {
@@ -52,9 +52,9 @@ const startApolloServer = async () => {
 };
 
 //Comment out this code once you have built out queries and mutations in the client folder
-//db.once('open', () => {
-  //app.listen(PORT, () => console.log(`Now listening on localhost: ${PORT}`));
-//});
+db.once('open', () => {
+  app.listen(PORT, () => console.log(`Now listening on localhost: ${PORT}`));
+});
 
 // Uncomment the following code once you have built the queries and mutations in the client folder
 startApolloServer();

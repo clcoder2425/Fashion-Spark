@@ -127,11 +127,10 @@ const Product = () => {
         <InfoContainer>
           <Title>Denim Jumpsuit</Title>
           <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+          Denim jeans are a timeless wardrobe staple that have been popular for decades.
+           They are made from a sturdy cotton twill fabric that is woven with a diagonal 
+           ribbing, giving it that classic blue color with white on the inside. This fabric is known for 
+          its durability and versatility, making it perfect for everyday wear.
           </Desc>
           <Price>$ 20</Price>
           <FilterContainer>
