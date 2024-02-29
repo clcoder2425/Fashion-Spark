@@ -108,7 +108,7 @@ const Navbar = () => {
   
   return (
     <Container>
-      <div class="header">
+      <div className="header">
       <Center>
                 <Logo style={{color:"#170a1c", fontSize:"70px",  }}>Fashion Spark </Logo>
                 </Center>
