@@ -23,10 +23,21 @@ const Left = styled.div`
   background-color: #cec075  ;
 `;
 
-const Logo = styled.h1``;
+const Logo = styled.h1`
+font-size: 25px;
+  font-weight: 600;
+  
+  line-height: 1.8;
+  color:#061c21 ;`
+;
 
 const Desc = styled.p`
   margin: 20px 0px;
+  font-size: 15px;
+  font-weight: 600;
+ 
+  line-height: 1.8;
+  color:#061c21 ;
 `;
 
 const SocialContainer = styled.div`
@@ -37,6 +48,7 @@ const SocialContainer = styled.div`
 const SocialIcon = styled.div`
   width: 40px;
   height: 40px;
+  
   border-radius: 50%;
   color: white;
   background-color: #${(props) => props.color};
@@ -55,12 +67,19 @@ const Center = styled.div`
 `;
 
 const Title = styled.h3`
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-size: 25px;
+  
 `;
 
 const List = styled.ul`
   margin: 0;
   padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 1.8;
+  color:#061c21 ;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +90,11 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 1.8;
+  color:#061c21 ;
 `;
 
 const Right = styled.div`

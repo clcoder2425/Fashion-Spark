@@ -21,11 +21,11 @@ ${mobile({ height: "50px" })}
 }`
 const Wrapper = styled.div`
 padding: 10px 20px;
-color:#170a1c;
+
 text-align: center;
 font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-font-size: 20px;;
-letter-spacing: 2px;
+
+
 
 color:#170a1c;
 display: flex;
@@ -47,7 +47,8 @@ font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 font-size: 12px;
 cursor: pointer;
 
-margin-left: 25px;
+
+margin-left: 9px;
 ${mobile({ fontSize: "12px", marginLeft: "10px" })}`
 
 const Center = styled.div`
@@ -58,8 +59,8 @@ text-align: center;`
 const Right = styled.div`
 flex: 1;
 display: flex;
-padding-left:750px;
-font-weight: bold;
+padding-left:720px;
+font-weight: 600;
 aicn-items: center;
 jcstify-content: flex-end;
 ${mobile({ flex: 2, justifyContent: "center" })}

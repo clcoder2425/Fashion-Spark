@@ -7,8 +7,10 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
 width: 100%;
-height: 39vh;
+height: 60vh;
 display: flex;
+
+
 position: relative;
 overflow: hidden;
 ${mobile({ display: "none" })}`
@@ -16,6 +18,7 @@ ${mobile({ display: "none" })}`
 const Arrow = styled.div`
 width: 40px;
 height: 40px;
+
 
 border-radius: 50%;
 display: flex;
@@ -33,6 +36,7 @@ z-index: 2;`
 
 const Wrapper = styled.div`
   height: 100%;
+  
 
   display: flex;
   transition: all 1.5s ease;
@@ -41,6 +45,7 @@ const Wrapper = styled.div`
 const Slide = styled.div`
 width:135vh;
   height: 85vh;
+  
   margin-top:12px;
   display: flex;
   align-items: center;
@@ -54,44 +59,59 @@ const ImgContainer = styled.div`
   
   
   
+  
   flex: 1;
 `;
 
 const Image = styled.img`
-  height: 80%;
+  
   
   
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
-  width:100%;
+ 
   margin-bottom:300px;
   margin-right:200px;
-  margin-right:100px;
-  padding-right:150px;
+  padding-top:100px;
+  padding-bottom:100px;
+  padding-left:10px;
+ 
+  
+ 
+ 
   
 `;
 
 const Title = styled.h1`
-  font-size: 30px;
- 
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  color:#34183e;
+  
  
 `;
 
 const Desc = styled.p`
  
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 1.8;
+  color:#061c21 ;
+  
 `;
 
 const Button = styled.button`
   
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 600;
   background-color: transparent;
   cursor: pointer;
- 
+  color:#170a1c ;
+  border-style: none;
 `;
 
 
