@@ -22,10 +22,10 @@ const server = new ApolloServer({
 // Uncomment the following code once you have built the queries and mutations in the client folder
 const startApolloServer = async () => {
   await server.start();
-  
+
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
-  
+
   // Uncomment the following code once you have built the queries and mutations in the client folder
   app.use('/graphql', expressMiddleware(server));
 
