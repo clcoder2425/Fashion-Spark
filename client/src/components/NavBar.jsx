@@ -1,4 +1,4 @@
-import React from 'react'
+import {Link} from 'react-router-dom';
 // import Search from '@mui/icons-material/Search';
 import styled from 'styled-components';
 import Badge from '@mui/material/Badge';
@@ -71,6 +71,7 @@ ${mobile({ fontSize: "24px" })}
 
 
 const Navbar = () => {
+  
   return (
     <Container>
       <div class="header">
@@ -89,13 +90,21 @@ const Navbar = () => {
             </Left>
             
             <Right>
-                <MenuItem>REGISTER</MenuItem>
+              <Link to="/register">
+                <MenuItem >REGISTER</MenuItem>
+                </Link>
+                <Link to="/login">
                 <MenuItem>SIGN IN</MenuItem>
-                <MenuItem>
+                </Link>
+                
+                <Link to="/cart">
+                  <MenuItem>
                     <Badge badgeContent={4} color="primary">
                         <ShoppingCartOutlinedIcon/>
                     </Badge>
-                </MenuItem>
+                    </MenuItem>
+                </Link>
+                
             </Right>
         </Wrapper>
         </Container>

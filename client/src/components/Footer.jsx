@@ -97,9 +97,11 @@ const Footer = () => {
       <Left>
         <Logo>Fashion Spark</Logo>
         <Desc>
+
         The ultimate destination for fashionistas on the hunt for the hottest trends.
          Our mission is to ignite your wardrobe with a dazzling array of styles that are sure to make you the envy of every runway. 
         So, buckle up and get ready to set the fashion world ablaze with Fashion Spark!
+
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
