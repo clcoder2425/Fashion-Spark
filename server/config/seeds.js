@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Product, Order, Cart } = require('../models');
+const { User, Product, Order, Cart , Category} = require('../models');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
