@@ -1,155 +1,183 @@
 const db = require('./connection');
-const { User, Product, Order } = require('../models');
+const { User, Product, Order, Cart } = require('../models');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
-  await cleanDB('Category', 'categories');
-  await cleanDB('Product', 'products');
-  await cleanDB('User', 'users');
+    await cleanDB('Category', 'categories');
+    await cleanDB('Product', 'products');
+    await cleanDB('User', 'users');
+    await cleanDB('Order', 'orders');
+    await cleanDB('Cart', 'carts');
 
-  const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' },
-  ]);
+    const categories = await Category.insertMany([
+        {
+            id: 1,
+            img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            title: "SHIRT STYLE!",
+            cat: 'Women'
 
-  console.log('categories seeded');
+        },
+        {
+            id: 2,
+            img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            title: "LOUNGEWEAR LOVE",
+            cat: "coats"
+        },
+        {
+            id: 3,
+            img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            title: "LIGHT JACKETS",
+            cat: "jeans"
+        },
+    ]);
 
-  const products = await Product.insertMany([
-    {
-      name: 'Tin of Cookies',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
-      category: categories[0]._id,
-      price: 2.99,
-      quantity: 500,
-    },
-    {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      category: categories[0]._id,
-      price: 1.99,
-      quantity: 500,
-    },
-    {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20,
-    },
-    {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50,
-    },
-    {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100,
-    },
-    {
-      name: 'Camera',
-      category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30,
-    },
-    {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30,
-    },
-    {
-      name: 'Tales at Bedtime',
-      category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100,
-    },
-    {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description:
-        'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000,
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000,
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100,
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600,
-    },
-  ]);
+    console.log('categories seeded');
 
-  console.log('products seeded');
+    const products = await Product.insertMany([
+        {
+            id: 1,
+            img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+            desc: "Mens Jake Guitar Vintage Crusher Tee",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 2,
+            img: "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+            desc: "Angela Natural Tee",
+            category: categories[0]._id,
+            size: "M",
+            color: "Blue",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 3,
+            img: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+            desc: "Prada T-Shirt",
+            category: categories[0]._id,
+            size: "S",
+            color: "BWhite",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 4,
+            img: "https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+            desc: "Burdastyle T-Shirt",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 5,
+            img: "https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+            desc: "Noissue x Creatsy Tote Bag Mockup Bundle",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 6,
+            img: "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+            desc: "Rocket Vintage Chill Cap",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 7,
+            img: "https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+            desc: "Arrow Jacket Forest",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 8,
+            img: "https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+            desc: "Women Jacket",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 9,
+            img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+            desc: "Mens Jake Guitar Vintage Crusher Tee",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 10,
+            img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+            desc: "Mens Jake Guitar Vintage Crusher Tee",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 11,
+            img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+            desc: "Mens Jake Guitar Vintage Crusher Tee",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+        {
+            id: 13,
+            img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+            desc: "Mens Jake Guitar Vintage Crusher Tee",
+            category: categories[0]._id,
+            size: "S",
+            color: "Black",
+            price: 28.00,
+            inStock: 10,
+        },
+    ]);
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id],
-      },
-    ],
-  });
+    console.log('products seeded');
 
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345',
-  });
+    await User.create({
+        firstName: 'Pamela',
+        lastName: 'Washington',
+        email: 'pamela@testmail.com',
+        password: 'password12345',
+        orders: [
+            {
+                products: [products[0]._id, products[0]._id, products[1]._id],
+            },
+        ],
+    });
 
-  console.log('users seeded');
+    await User.create({
+        firstName: 'Elijah',
+        lastName: 'Holt',
+        email: 'eholt@testmail.com',
+        password: 'password12345',
+    });
 
-  process.exit();
+    console.log('users seeded');
+
+    process.exit();
 });
