@@ -1,10 +1,10 @@
 const { User, Product, Order } = require('../models');
-const { signToken, AuthenticationError } = require('../utils/auth');
+const { signToken, AuthenticationError } = require('../routes/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
     Query: {
-        users: async () => {
+        user: async () => {
             return await User.find();
         },
         
