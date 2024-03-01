@@ -5,7 +5,7 @@ import { mobile } from "../responsive";
   
 
 const Container = styled.div`
-  height: 30vh;
+  height: 2vh;
   width:40vh;
   background-color: #F8F9FA ;
   display: flex;
@@ -55,14 +55,7 @@ const Button = styled.button`
 const Newsletter = () => {
   return (
     <Container>
-      <Title>Product</Title>
-      <Desc>Product Description</Desc>
-      <div>
-      <Desc>Add to Cart &nbsp;&nbsp;&nbsp; </Desc>
-        <Button>
-          <Send />
-        </Button>
-        </div>
+     
      
     </Container>
   );
