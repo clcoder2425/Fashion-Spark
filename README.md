@@ -39,6 +39,7 @@ Secure payment gateway integration<br>
 Order tracking and history <br>
 
 Link to repository: https://github.com/clcoder2425/Fashion-Spark <br>
+Link to deployed application: https://fashion-spark-xfpw.onrender.com/ <br>
 Demo:![DEMO](FashionSparkDemo.gif)<br>
 
 
